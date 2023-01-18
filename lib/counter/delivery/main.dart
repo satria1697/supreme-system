@@ -23,18 +23,18 @@ class CounterPage extends StatelessWidget {
                   const Text('Counter Page'),
                   Text('${state.clicked}'),
                   TextButton(
-                    onPressed: () => BlocProvider.of<CounterBloc>(context)
-                        .add(PlusButtonClicked()),
+                    onPressed: () =>
+                        context.read<CounterBloc>().add(PlusButtonClicked()),
                     child: const Icon(Icons.plus_one),
                   ),
                   TextButton(
-                    onPressed: () => BlocProvider.of<CounterBloc>(context)
-                        .add(MinusButtonClicked()),
+                    onPressed: () =>
+                        context.read<CounterBloc>().add(MinusButtonClicked()),
                     child: const Icon(Icons.exposure_minus_1),
                   ),
                   TextButton(
-                    onPressed: () => BlocProvider.of<CounterBloc>(context)
-                        .add(ResetButtonClicked()),
+                    onPressed: () =>
+                        context.read<CounterBloc>().add(ResetButtonClicked()),
                     child: const Text('Reset'),
                   )
                 ],
