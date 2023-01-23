@@ -13,7 +13,7 @@ class MainPage extends StatelessWidget {
           children: [
             TextButton(
               onPressed: () => {Navigator.pushNamed(context, '/counter')},
-              child: const Text('Counter Page'),
+              child: const Text('Counter'),
             )
           ],
         ),
